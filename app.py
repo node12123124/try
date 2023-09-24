@@ -8,7 +8,7 @@ from concurrent.futures import ThreadPoolExecutor
 import threading
 curr_dir = os.path.dirname(os.path.abspath(__file__))
 problems_dir = os.path.join(curr_dir,"problem/")
-solutions_dir = "solution/"
+solutions_dir = os.path.join(curr_dir,"solution/")
 # Send an API request and get a response.
 
 @app.route('/solve', methods=['GET'])
