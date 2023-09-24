@@ -7,7 +7,7 @@ app = Flask(__name__)
 from concurrent.futures import ThreadPoolExecutor
 import threading
 curr_dir = os.path.dirname(os.path.abspath(__file__))
-problems_dir = os.path.join(curr_dir,"problem/")
+problems_dir = os.path.join(curr_dir,"problems/")
 solutions_dir = os.path.join(curr_dir,"solution/")
 # Send an API request and get a response.
 
