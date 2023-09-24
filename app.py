@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify
 import openai
-import bardapi
+# import bardapi
 import os
-from test import get_bard_reponse, get_chatgpt_response
+from test import get_chatgpt_response
 app = Flask(__name__)
 from concurrent.futures import ThreadPoolExecutor
 import threading
