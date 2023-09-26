@@ -1,11 +1,11 @@
 
 # import bardapi
-import os
-import requests
+# import os
+# import requests
 # from bardapi import Bard, SESSION_HEADERS
 import openai
-openai.api_key = ""
-openai.api_base = "https://cock-za06.onrender.com/v1"  
+openai.api_key = "zu-27bc1b6feeebebb18ce802f9b28c9d8f"
+openai.api_base = "https://zukijourney.xyzbot.net/v1"  
 
 # token = "bQh2OzDGvHb0xf13XMwCTm-pSDwBSrM4TRIyAz22QiVb-fOsKywVbvcNz6OKiQZU6u0RJg."
 # session = requests.Session()
