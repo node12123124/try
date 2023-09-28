@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 import openai
-import bardapi
+# import bardapi
 import os
 from test import get_chatgpt_response
 app = Flask(__name__)
