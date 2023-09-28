@@ -1,10 +1,10 @@
 
 # import bardapi
 # import os
-# import requests
+import requests
 # from bardapi import Bard, SESSION_HEADERS
 import openai
-openai.api_key = "zu-27bc1b6feeebebb18ce802f9b28c9d8f"
+openai.api_key = "zu-049ebb017c7f7ceeef231495f1bc698a"
 openai.api_base = "https://zukijourney.xyzbot.net/v1"  
 
 # token = "bQh2OzDGvHb0xf13XMwCTm-pSDwBSrM4TRIyAz22QiVb-fOsKywVbvcNz6OKiQZU6u0RJg."
@@ -32,3 +32,5 @@ def get_chatgpt_response(input_text):
         ],
     )
     return chat_completion.choices[0].message.content
+
+# def reset_chatgpt_ip():

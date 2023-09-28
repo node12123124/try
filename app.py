@@ -1,13 +1,13 @@
 from flask import Flask, request, jsonify
 import openai
-# import bardapi
+import bardapi
 import os
 from test import get_chatgpt_response
 app = Flask(__name__)
 from concurrent.futures import ThreadPoolExecutor
 import threading
 curr_dir = os.path.dirname(os.path.abspath(__file__))
-problems_dir = os.path.join(curr_dir,"problems/")
+problems_dir = os.path.join(curr_dir,"problem/")
 solutions_dir = "solution/"
 # Send an API request and get a response.
 
@@ -78,6 +78,8 @@ def invoke_problem(problem_id):
     thread.start()
     return jsonify({'message': 'Problem received and is being solved in the background'})
 
+# @app.route('/reset', methods=['GET'])
+# def reset_ip():
 
 @app.route('/solution/<problem_id>', methods=['GET'])
 def get_solution(problem_id):
