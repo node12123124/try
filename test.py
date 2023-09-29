@@ -23,7 +23,7 @@ openai.api_base = "https://zukijourney.xyzbot.net/v1"
 def get_chatgpt_response(input_text):
     chat_completion = openai.ChatCompletion.create(
         stream=False,
-        model="3.5-turbo",
+        model="llama2",
         messages=[
             {
                 "role": "user",
