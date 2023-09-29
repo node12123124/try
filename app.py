@@ -7,7 +7,7 @@ app = Flask(__name__)
 from concurrent.futures import ThreadPoolExecutor
 import threading
 curr_dir = os.path.dirname(os.path.abspath(__file__))
-problems_dir = os.path.join(curr_dir,"problem/")
+problems_dir = os.path.join(curr_dir,"problems/")
 solutions_dir = "solution/"
 # Send an API request and get a response.
 
@@ -53,8 +53,7 @@ def solve_problem_from_file(problem_id):
         with open(problem_file_name, 'r') as problem_file:
             problem = problem_file.read()
 
-        # Call the ChatGPT API to generate a solution
-        
+        # Call the ChatGPT API to generate a solution  
         response = get_chatgpt_response(problem)
 
         # Save the solution to the specified file
@@ -69,10 +68,6 @@ def solve_problem_from_file(problem_id):
 
 @app.route('/invoke/<problem_id>', methods=['GET'])
 def invoke_problem(problem_id):
-    # Call the solve_problem_from_file function to solve the problem and save the solution
-    # result = solve_problem_from_file(problem_id)
-    # with ThreadPoolExecutor() as executor:
-        # executor.submit(solve_problem_from_file, problem_id)
     thread = threading.Thread(target=solve_problem_from_file, args=(problem_id,))
     thread.daemon = True
     thread.start()
